@@ -1,121 +1,364 @@
-@media (min-width:320px) and (max-width:480px){
-    body{
-        background-color: rgb(4, 1, 8);
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-   /* style.css */
+/* Phone Styles */
+@media (max-width: 767px) {
+    body {
+        background-color: #222; /* Softer dark background */
+        color: #eee;
+        font-family: 'Arial', sans-serif;
+    }
 
-.container {
-    text-align: center; /* Centers content within the container */
-}
+    .container {
+        padding: 80px 20px 20px 20px; /* Top padding for navbar */
+    }
 
-.laptop-image, .hello-image {
-    width: 100%;
-    margin-bottom: 20px;
-}
-.laptop-image img {
-    max-width: 100%;
-    height: auto; 
-}
+    .navbar {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 10;
+    }
 
-.about-me {
+    .navbar .logo {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.5em;
+        float: left;
+    }
 
-    text-align: center;
-}
+    .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        clear: both;
+    }
 
-.about-me-text {
-    color: #007acc;
-}
+    .navbar li {
+        display: block;
+        margin: 10px 0;
+    }
 
-.profile-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Vertically aligns items in the flex container */
-    margin: none;
-    padding: none; 
-}
+    .navbar a {
+        text-decoration: none;
+        color: #eee;
+    }
 
-.profile-image {
-    background-color: #dbdfe2;
-    border-radius: 50%;
-    width: 300px; /* Adjust size as needed */
-    height: 200px; /* Adjust size as needed */
-    overflow: hidden; /* Ensures image fits within the circle */
-}
+    .hello-image img {
+        max-width: 100%;
+        height: 250px; /* Increased image height */
+        margin-bottom: 20px;
+    }
 
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Makes sure the image covers the whole area */
-}
+    .profile-section {
+        flex-direction: column;
+        align-items: center; /* Center profile content */
+        margin-bottom: 20px;
+    }
 
-.profile-details {
-    border-left: 5px solid #007acc;
-    padding-left: 20px;
-    margin-left: 20px;
-    text-align: left; 
-}
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%; 
+        object-fit: cover; 
+    }
 
-.keyword {
-    color: #d4d4d4;
-}
+    .profile-details h3 {
+        font-size: 1.8em;
+        color: #007bff; /* Blue heading */
+        margin-bottom: 5px;
+    }
 
-.variable {
-    color: #4ec9b0;
-}
+    .profile-details .role,
+    .profile-details .location {
+        color: #ddd; /* Light gray text */
+    }
 
-.operator {
-    color: #dcdcdc;
-}
+    .about-me-text,
+    .interests {
+        text-align: left;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
 
-.string {
-    color: #ce9178;
-}
+    .interests h4 {
+        color: #007bff; /* Blue heading */
+    }
 
-.array-item {
-    padding-left: 40px;
-}
+    .interests ul {
+        padding: 0;
+        margin-top: 10px;
+    }
 
-.company-logos {
-    margin-top: 20px;
-}
+    .interests li {
+        list-style: disc; /* Use disc for list style */
+        margin-left: 30px; 
+        margin-bottom: 5px;
+    }
 
-.company-logos img {
-    max-width: 150px; /* Adjust as needed */
-    margin: 0 10px; /* Adds spacing between logos */
-}
+    .project {
+        background-color: #333; /* Darker background for project cards */
+        color: #eee;
+        padding: 20px;
+        border-radius: 5px;
+    }
 
-.placeholder-logo {
-    background-color: transparent; 
-    width: 100px; /* Maintain space for the placeholder */
-    height: 100px; ; /* Maintain space for the placeholder */
-    border: 1px dashed gray; /* Optional: Visual indication of placeholder */
-}
+    .project h4 {
+        color: #007bff; /* Blue heading */
+    }
+
+    .skills-section {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .skill {
+        background-color: #333;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    .skill h4 {
+        color: #007bff; /* Blue heading */
+        margin-bottom: 10px;
+    }
+
+    .progress-bar {
+        width: 100%;
+        background-color: #444; /* Darker gray for progress bar background */
+        height: 8px;
+        border-radius: 5px;
+    }
+
+    .progress {
+        background-color: #007bff;
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    .contact-section a {
+        display: block;
+        color: #007bff; /* Blue link color */
+        text-decoration: none;
+        margin-bottom: 10px;
     }
 }
-.projects-section {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
-.project {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-}
+/* Laptop Styles */
+@media (min-width: 768px) {
+    body {
+        background-color: #f5f5f5; /* Light background */
+        color: #333; 
+        font-family: 'Arial', sans-serif;
+    }
 
-.project-link {
-    color: #f80; 
-    text-decoration: none;
-}
-.contact-section {
-    text-align: center; /* Center the contact information */
-}
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 30px;
+    }
 
-.contact-section a {
-    display: block; /* Make each link take up the full width */
-    color: #f80; /* Example color, adjust as needed */
-    text-decoration: none;
-    margin-bottom: 10px;
+    .navbar {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+        padding: 15px 0;
+        position: fixed; 
+        top: 0;
+        width: 100%; 
+        z-index: 10; 
+    }
+
+    .navbar .logo {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.8em;
+    }
+
+    .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex; 
+    }
+
+    .navbar li {
+        margin: 0 15px;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s ease; 
+    }
+
+    .navbar a:hover {
+        color: #007bff;
+    }
+
+    .header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+        height: calc(100vh - 60px); /* Adjust for navbar height */
+    }
+
+    .hello-image img {
+        max-width: 80%;
+    }
+
+    .about-me, #projects {
+        height: calc(100vh - 60px); 
+        /* Add overflow: auto; if you want scrollbars for overflowing content */
+    }
+
+    /* Remove height: 100vh from Skills section */
+    #skills { 
+        padding-top: 60px; /* Add padding to match navbar height */
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .profile-section {
+        display: flex;
+        align-items: center;
+        width: 80%; 
+        margin-bottom: 30px; 
+    }
+
+    .profile-image {
+        margin-right: 30px; 
+    }
+
+    .profile-image img {
+        width: 200px; 
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .profile-details {
+        text-align: left; 
+    }
+
+    .profile-details h3 {
+        margin: 0;
+        font-size: 2.5em; 
+        color: #007bff; 
+    }
+
+    .profile-details .role {
+        font-size: 1.2em;
+        color: #555; 
+        margin: 5px 0;
+    }
+
+    .profile-details .location {
+        font-size: 1em;
+        color: #888; 
+    }
+
+    .about-me-text {
+        text-align: left;
+        width: 80%; 
+        line-height: 1.8; 
+    }
+
+    .interests {
+        text-align: left;
+        width: 80%;
+    }
+
+    .interests h4 {
+        color: #007bff;
+        margin-bottom: 10px;
+    }
+
+    .interests ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .interests li {
+        margin-bottom: 5px;
+    }
+
+    .projects-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust grid width */
+        gap: 30px;
+    }
+
+    .project {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-link {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .project-link:hover {
+        background-color: #0056b3;
+    }
+
+    .skills-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid width */
+        gap: 20px;
+    }
+
+    .skill {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .progress-bar {
+        width: 100%;
+        background-color: #ddd;
+        height: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .progress {
+        background-color: #007bff;
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    .contact-section {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .contact-section a {
+        display: inline-block;
+        margin: 0 15px;
+        font-size: 1.2em; /* Slightly larger font size */
+    }
 }
