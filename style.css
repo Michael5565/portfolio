@@ -93,3 +93,29 @@
 }
     }
 }
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.project-link {
+    color: #f80; 
+    text-decoration: none;
+}
+.contact-section {
+    text-align: center; /* Center the contact information */
+}
+
+.contact-section a {
+    display: block; /* Make each link take up the full width */
+    color: #f80; /* Example color, adjust as needed */
+    text-decoration: none;
+    margin-bottom: 10px;
+}
