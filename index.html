@@ -9,12 +9,15 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
+    <button class="mobile-nav-toggle" onclick="toggleNav()">☰</button>
+
+    <nav class="navbar" id="navbar">
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" onclick="closeNav()">About</a></li>
+            <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+            <li><a href="#skills" onclick="closeNav()">Skills</a></li>
+            <li><a href="#contact" onclick="closeNav()">Contact</a></li>
         </ul>
     </nav>
 
@@ -110,5 +113,44 @@
             </div>
         </div>
     </div>
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const toggleBtn = document.querySelector('.theme-toggle');
+            
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+                toggleBtn.innerHTML = '🌙 Toggle Theme';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                toggleBtn.innerHTML = '☀️ Toggle Theme';
+            }
+        }
+
+        // Mobile Navigation
+        function toggleNav() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        }
+
+        function closeNav() {
+            const navbar = document.getElementById('navbar');
+            if (window.innerWidth <= 768) {
+                navbar.classList.remove('active');
+            }
+        }
+
+        // Close nav when clicking outside
+        document.addEventListener('click', function(event) {
+            const navbar = document.getElementById('navbar');
+            const navToggle = document.querySelector('.mobile-nav-toggle');
+            
+            if (!navbar.contains(event.target) && !navToggle.contains(event.target)) {
+                navbar.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
